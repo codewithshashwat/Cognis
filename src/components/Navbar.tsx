@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -39,10 +40,11 @@ export default function Navbar() {
             className="relative group"
           >
             <span
-              className="text-3xl font-bold tracking-wider transition-all duration-300"
-              style={{ color: '#f2f2f2' }}
+              className="text-3xl font-bold tracking-wider transition-all flex justify-center items-center duration-300"
+              style={{ color: '#e84c2b' }}
             >
-              Cognis
+              <Image src="/logo.ico" alt="Cognis Logo" width="32" height="32" />
+              ognis
             </span>
             <span
               className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"

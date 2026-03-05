@@ -67,8 +67,8 @@ export default function Features() {
         </section>
 
         {/* Features Grid */}
-        <section className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 justify-center">
+        <section className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature) => (
               <div
                 key={feature.title}
@@ -81,51 +81,27 @@ export default function Features() {
                   e.currentTarget.style.borderColor = 'rgba(232, 76, 43, 0.1)';
                 }}
               >
-                {/* Glow Effect */}
                 <div
                   className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 blur-2xl transition-opacity duration-500"
                   style={{ backgroundColor: '#e84c2b' }}
                 />
 
                 <div className="relative z-10 space-y-4">
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: 'rgba(232, 76, 43, 0.1)' }}>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: 'rgba(232, 76, 43, 0.1)' }}>
                     {feature.icon}
                   </div>
-
-                  {/* Title */}
-                  <div className="flex items-center space-x-3">
-                    <h3
-                      className="text-xl font-semibold transition-all duration-300"
-                      style={{ color: '#f2f2f2' }}
-                    >
-                      {feature.title}
-                    </h3>
-                    {feature.comingSoon && (
-                      <span
-                        className="px-2 py-0.5 rounded text-xs font-medium"
-                        style={{ backgroundColor: 'rgba(232, 76, 43, 0.15)', color: '#e84c2b' }}
-                      >
-                        Soon
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Description */}
+                  <h3
+                    className="text-xl font-semibold transition-all duration-300"
+                    style={{ color: '#f2f2f2' }}
+                  >
+                    {feature.title}
+                  </h3>
                   <p
                     className="text-sm leading-relaxed"
                     style={{ color: '#808080' }}
                   >
                     {feature.description}
                   </p>
-                </div>
-
-                {/* Arrow Indicator */}
-                <div
-                  className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0"
-                  style={{ color: '#e84c2b' }}
-                >
-                  →
                 </div>
               </div>
             ))}

@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -57,10 +58,10 @@ export default function About() {
               Our Story
             </div>
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold flex items-center justify-center tracking-tight leading-tight"
               style={{ color: '#f2f2f2' }}
             >
-              About Cognis
+              About <Image src="/logo.ico" alt="Cognis Logo" width="62" height="62" className='ml-2.5'/>ognis
             </h1>
             <p
               className="max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed"
